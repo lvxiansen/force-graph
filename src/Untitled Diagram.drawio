@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-20T13:41:48.894Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="phjOFYFnjBemWgDcXgm1" version="18.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-20T13:42:25.111Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="Dw2RHBdQfwILIV4oF73a" version="18.0.8" type="github">
   <diagram id="lNqnWQlrgnRqup0vw0e9" name="第 1 页">
     <mxGraphModel dx="2635" dy="543" grid="1" gridSize="20" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="1" shadow="0">
       <root>
@@ -36,7 +36,7 @@
         <mxCell id="01LtdW2ey1wHVB4gt98n-10" value="按照指定的迭代次数循环进行仿真。每一次迭，计算当前的alpha值" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="280" y="180" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="01LtdW2ey1wHVB4gt98n-18" value="&lt;span style=&quot;&quot;&gt;$$alpha += (alphaTarget - alpha) * alphaDecay$$,&lt;br&gt;其中&lt;span style=&quot;font-size: 6px;&quot;&gt;alpha表示simulation当前的状态&lt;/span&gt;&lt;br&gt;&lt;/span&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fontSize=6;" vertex="1" parent="1">
+        <mxCell id="01LtdW2ey1wHVB4gt98n-18" value="&lt;span style=&quot;&quot;&gt;$$alpha += (alphaTarget - alpha) * alphaDecay$$,&lt;br&gt;其中&lt;span style=&quot;font-size: 6px;&quot;&gt;alpha表示simulation当前的状态，&lt;/span&gt;&lt;br&gt;&lt;/span&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fontSize=6;" vertex="1" parent="1">
           <mxGeometry x="-120" y="195" width="320" height="65" as="geometry" />
         </mxCell>
       </root>

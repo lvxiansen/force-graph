@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-05-20T13:07:21.404Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="2rkx8JBg0J3-Kmi53vA8" version="18.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-20T13:41:48.894Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="phjOFYFnjBemWgDcXgm1" version="18.0.8" type="github">
   <diagram id="lNqnWQlrgnRqup0vw0e9" name="第 1 页">
-    <mxGraphModel dx="981" dy="543" grid="1" gridSize="20" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="1" shadow="0">
+    <mxGraphModel dx="2635" dy="543" grid="1" gridSize="20" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="1" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,11 +10,34 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="01LtdW2ey1wHVB4gt98n-3" value="导入节点" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="01LtdW2ey1wHVB4gt98n-3" value="导入节点，创建一个没有任何力模型的仿真，仿真会自动start" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="600" y="10" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="01LtdW2ey1wHVB4gt98n-5" value="初始化节点，添加index、x、y、vx、vy等属性。&lt;br&gt;将节点nodes按一定半径和旋转角度环绕按叶序排列。&lt;br&gt;遍历每个节点，设置其index即遍历顺序和初始坐标x和y,vx=vy=0." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="01LtdW2ey1wHVB4gt98n-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="01LtdW2ey1wHVB4gt98n-5" target="01LtdW2ey1wHVB4gt98n-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-5" value="初始化节点，添加index、x、y、vx、vy等属性。&lt;br&gt;将节点nodes按一定半径和旋转角度环绕按叶序排列。&lt;br&gt;遍历每个节点，设置其index为遍历顺序i和初始坐标x和y,vx=vy=0." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="482.5" y="100" width="355" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-7" value="对于force数组中的每个力，进行初始化操作，传入参数nodes,random,nDim" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="01LtdW2ey1wHVB4gt98n-9" target="01LtdW2ey1wHVB4gt98n-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-9" value="创建一个计时器，定义初始阈值alpha和alphaMin，以及迭代次数iterations" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="01LtdW2ey1wHVB4gt98n-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-10" value="按照指定的迭代次数循环进行仿真。每一次迭，计算当前的alpha值" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-18" value="&lt;span style=&quot;&quot;&gt;$$alpha += (alphaTarget - alpha) * alphaDecay$$,&lt;br&gt;其中&lt;span style=&quot;font-size: 6px;&quot;&gt;alpha表示simulation当前的状态&lt;/span&gt;&lt;br&gt;&lt;/span&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fontSize=6;" vertex="1" parent="1">
+          <mxGeometry x="-120" y="195" width="320" height="65" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

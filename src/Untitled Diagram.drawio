@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-20T13:42:25.111Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="Dw2RHBdQfwILIV4oF73a" version="18.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-20T13:54:38.469Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="bF9Dzzv5tpMe8zECmy1Y" version="18.0.8" type="github">
   <diagram id="lNqnWQlrgnRqup0vw0e9" name="第 1 页">
     <mxGraphModel dx="2635" dy="543" grid="1" gridSize="20" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="1" shadow="0">
       <root>
@@ -25,19 +25,25 @@
         <mxCell id="01LtdW2ey1wHVB4gt98n-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="01LtdW2ey1wHVB4gt98n-9" target="01LtdW2ey1wHVB4gt98n-10">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="01LtdW2ey1wHVB4gt98n-9" value="创建一个计时器，定义初始阈值alpha和alphaMin，以及迭代次数iterations" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="280" y="40" width="120" height="60" as="geometry" />
+        <mxCell id="01LtdW2ey1wHVB4gt98n-9" value="创建一个计时器，定义初始阈值alpha和alphaMin和alphaTarget，以及迭代次数iterations" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="40" width="260" height="60" as="geometry" />
         </mxCell>
         <mxCell id="01LtdW2ey1wHVB4gt98n-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="01LtdW2ey1wHVB4gt98n-10">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="200" y="210" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=6;" edge="1" parent="1" source="01LtdW2ey1wHVB4gt98n-10" target="01LtdW2ey1wHVB4gt98n-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="01LtdW2ey1wHVB4gt98n-10" value="按照指定的迭代次数循环进行仿真。每一次迭，计算当前的alpha值" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="280" y="180" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="01LtdW2ey1wHVB4gt98n-18" value="&lt;span style=&quot;&quot;&gt;$$alpha += (alphaTarget - alpha) * alphaDecay$$,&lt;br&gt;其中&lt;span style=&quot;font-size: 6px;&quot;&gt;alpha表示simulation当前的状态，&lt;/span&gt;&lt;br&gt;&lt;/span&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fontSize=6;" vertex="1" parent="1">
-          <mxGeometry x="-120" y="195" width="320" height="65" as="geometry" />
+        <mxCell id="01LtdW2ey1wHVB4gt98n-22" value="&lt;span style=&quot;font-size: 6px;&quot;&gt;$$alphaDecay = 1 - alphaMin^{1/300}$$&lt;/span&gt;&lt;br&gt;$$alpha += (alphaTarget - alpha) * alphaDecay$$&lt;br&gt;alpha表示simulation当前的状态，默认1&lt;br&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;alphaTarget表示最终要稳定时的状态，默认0&lt;/span&gt;&lt;br&gt;alphamin表示设定的阈值，默认0.001&lt;br&gt;alphaDecay表示alpha每次的衰减率,衰减系数决定了布局冷却的快慢" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="140" width="380" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-23" value="将当前alpha值传入指定的力模型中" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="320" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

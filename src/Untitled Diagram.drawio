@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-05-21T12:17:00.906Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="DZPl5rCzQeFrZ2GqWUrD" version="18.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-21T12:34:37.847Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="uZxm8oX861NtRBVlZQPC" version="18.0.8" type="github">
   <diagram id="lNqnWQlrgnRqup0vw0e9" name="第 1 页">
-    <mxGraphModel dx="3076" dy="754" grid="1" gridSize="20" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="1" shadow="0">
+    <mxGraphModel dx="1185" dy="628" grid="1" gridSize="20" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="1" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -19,50 +19,80 @@
         <mxCell id="01LtdW2ey1wHVB4gt98n-5" value="初始化节点，添加index、x、y、vx、vy等属性。&lt;br&gt;将节点nodes按一定半径和旋转角度环绕按叶序排列。&lt;br&gt;遍历每个节点，设置其index为遍历顺序i和初始坐标x和y,vx=vy=0." style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="482.5" y="100" width="355" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="01LtdW2ey1wHVB4gt98n-7" value="对于force数组中的每个力，进行初始化操作，传入参数nodes,random,nDim" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="600" y="220" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="bXek7AXk7ThC2l7RJmkr-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="01LtdW2ey1wHVB4gt98n-9" target="bXek7AXk7ThC2l7RJmkr-1">
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="01LtdW2ey1wHVB4gt98n-7" target="01LtdW2ey1wHVB4gt98n-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="01LtdW2ey1wHVB4gt98n-9" value="创建一个计时器，定义初始阈值alpha和alphaMin和alphaTarget，以及迭代次数iterations，速度衰退率velocityDecay" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="210" y="10" width="260" height="60" as="geometry" />
+        <mxCell id="01LtdW2ey1wHVB4gt98n-7" value="对于force数组中的每个力，进行初始化操作，传入参数nodes,random,nDim" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="600" y="200" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="01LtdW2ey1wHVB4gt98n-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="01LtdW2ey1wHVB4gt98n-10" target="01LtdW2ey1wHVB4gt98n-22" edge="1">
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-28" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="80" y="300" width="710" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-9" value="创建一个计时器，定义初始阈值alpha和alphaMin和alphaTarget，以及迭代次数iterations，速度衰退率velocityDecay" style="rounded=0;whiteSpace=wrap;html=1;" parent="bXek7AXk7ThC2l7RJmkr-28" vertex="1">
+          <mxGeometry x="450" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-26" value="" style="group" vertex="1" connectable="0" parent="bXek7AXk7ThC2l7RJmkr-28">
+          <mxGeometry x="40" y="100" width="640" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-10" value="每一次迭代，计算当前的alpha值，使alpha不断衰减" style="whiteSpace=wrap;html=1;rounded=0;" parent="bXek7AXk7ThC2l7RJmkr-26" vertex="1">
+          <mxGeometry x="480" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-23" value="将当前alpha值传入指定的力模型中,并调用注册的力模型" style="whiteSpace=wrap;html=1;rounded=0;" parent="bXek7AXk7ThC2l7RJmkr-26" vertex="1">
+          <mxGeometry x="480" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=6;" parent="bXek7AXk7ThC2l7RJmkr-26" source="01LtdW2ey1wHVB4gt98n-10" target="01LtdW2ey1wHVB4gt98n-23" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-25" value="计算节点现在位置x" style="whiteSpace=wrap;html=1;rounded=0;" parent="bXek7AXk7ThC2l7RJmkr-26" vertex="1">
+          <mxGeometry x="480" y="355" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=6;" parent="bXek7AXk7ThC2l7RJmkr-26" source="01LtdW2ey1wHVB4gt98n-23" target="01LtdW2ey1wHVB4gt98n-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-27" value="$$node.vx = node.vx * velocityDecay$$&lt;br&gt;$$node.x = node.x + node.vx $$&lt;br&gt;node.y,node.z 同理&lt;br&gt;vx为节点当前速度，velocityDecay为&lt;span style=&quot;font-size: 12px;&quot;&gt;节点衰退率，默认为0.6&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" parent="bXek7AXk7ThC2l7RJmkr-26" vertex="1">
+          <mxGeometry y="330" width="340" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=6;" parent="bXek7AXk7ThC2l7RJmkr-26" source="01LtdW2ey1wHVB4gt98n-25" target="01LtdW2ey1wHVB4gt98n-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="bXek7AXk7ThC2l7RJmkr-26" source="bXek7AXk7ThC2l7RJmkr-1" target="01LtdW2ey1wHVB4gt98n-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-1" value="对图形位置进行迭代，直到\(alpha&amp;lt;alphamin\)" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="bXek7AXk7ThC2l7RJmkr-26">
+          <mxGeometry x="440" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-27" value="" style="group" vertex="1" connectable="0" parent="bXek7AXk7ThC2l7RJmkr-28">
+          <mxGeometry y="180" width="380" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-22" value="&lt;span style=&quot;font-size: 6px;&quot;&gt;$$alphaDecay = 1 - alphaMin^{1/300}$$&lt;/span&gt;&lt;br&gt;$$alpha = alpha +&amp;nbsp; (alphaTarget - alpha) * alphaDecay$$&lt;br&gt;alpha表示simulation当前的状态，默认1&lt;br&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;alphaTarget表示最终要稳定时的状态，默认0&lt;/span&gt;&lt;br&gt;alphamin表示设定的阈值，默认0.001&lt;br&gt;alphaDecay表示alpha每次的衰减率,衰减系数决定了布局冷却的快慢,默认为0.022" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" parent="bXek7AXk7ThC2l7RJmkr-27" vertex="1">
+          <mxGeometry width="380" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="bXek7AXk7ThC2l7RJmkr-28" source="01LtdW2ey1wHVB4gt98n-9" target="bXek7AXk7ThC2l7RJmkr-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="01LtdW2ey1wHVB4gt98n-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="bXek7AXk7ThC2l7RJmkr-28" source="01LtdW2ey1wHVB4gt98n-10" target="01LtdW2ey1wHVB4gt98n-22" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="200" y="210" as="targetPoint" />
+            <mxPoint x="400" y="110" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="01LtdW2ey1wHVB4gt98n-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=6;" parent="1" source="01LtdW2ey1wHVB4gt98n-10" target="01LtdW2ey1wHVB4gt98n-23" edge="1">
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bXek7AXk7ThC2l7RJmkr-31" target="bXek7AXk7ThC2l7RJmkr-33">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="01LtdW2ey1wHVB4gt98n-10" value="每一次迭代，计算当前的alpha值，使alpha不断衰减" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="280" y="230" width="120" height="60" as="geometry" />
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-31" value="通过force.initialize传递给manybody力模型" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="837.5" y="640" width="242.5" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="01LtdW2ey1wHVB4gt98n-22" value="&lt;span style=&quot;font-size: 6px;&quot;&gt;$$alphaDecay = 1 - alphaMin^{1/300}$$&lt;/span&gt;&lt;br&gt;$$alpha = alpha +&amp;nbsp; (alphaTarget - alpha) * alphaDecay$$&lt;br&gt;alpha表示simulation当前的状态，默认1&lt;br&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;alphaTarget表示最终要稳定时的状态，默认0&lt;/span&gt;&lt;br&gt;alphamin表示设定的阈值，默认0.001&lt;br&gt;alphaDecay表示alpha每次的衰减率,衰减系数决定了布局冷却的快慢,默认为0.022" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" parent="1" vertex="1">
-          <mxGeometry x="-240" y="180" width="380" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="01LtdW2ey1wHVB4gt98n-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=6;" parent="1" source="01LtdW2ey1wHVB4gt98n-23" target="01LtdW2ey1wHVB4gt98n-25" edge="1">
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="01LtdW2ey1wHVB4gt98n-23" target="bXek7AXk7ThC2l7RJmkr-31">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="01LtdW2ey1wHVB4gt98n-23" value="将当前alpha值传入指定的力模型中,并调用注册的力模型" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="280" y="340" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="01LtdW2ey1wHVB4gt98n-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=6;" parent="1" source="01LtdW2ey1wHVB4gt98n-25" target="01LtdW2ey1wHVB4gt98n-27" edge="1">
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bXek7AXk7ThC2l7RJmkr-33" target="bXek7AXk7ThC2l7RJmkr-35">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="01LtdW2ey1wHVB4gt98n-25" value="计算节点现在位置x" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="280" y="455" width="120" height="60" as="geometry" />
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-33" value="初始化每个节点的强度strength也即电荷量" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="838.75" y="740" width="241.25" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="01LtdW2ey1wHVB4gt98n-27" value="$$node.vx = node.vx * velocityDecay$$&lt;br&gt;$$node.x = node.x + node.vx $$&lt;br&gt;node.y,node.z 同理&lt;br&gt;vx为节点当前速度，velocityDecay为&lt;span style=&quot;font-size: 12px;&quot;&gt;节点衰退率，默认为0.6&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" parent="1" vertex="1">
-          <mxGeometry x="-200" y="430" width="340" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="bXek7AXk7ThC2l7RJmkr-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="bXek7AXk7ThC2l7RJmkr-1" target="01LtdW2ey1wHVB4gt98n-10">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="bXek7AXk7ThC2l7RJmkr-1" value="&lt;span style=&quot;&quot;&gt;按照指定的迭代次数循环进行仿真。默认为1.&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="240" y="100" width="200" height="60" as="geometry" />
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-35" value="对于每个节点要计算其它所有节点对它的作用力，这样时间复杂度就是n方" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="899.375" y="850" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

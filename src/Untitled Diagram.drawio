@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-05-21T09:25:56.710Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="ZJUKRpw58GSQuPNHUusF" version="18.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-21T12:17:00.906Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="DZPl5rCzQeFrZ2GqWUrD" version="18.0.8" type="github">
   <diagram id="lNqnWQlrgnRqup0vw0e9" name="第 1 页">
-    <mxGraphModel dx="2467" dy="431" grid="1" gridSize="20" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="1" shadow="0">
+    <mxGraphModel dx="3076" dy="754" grid="1" gridSize="20" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="1" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -17,10 +17,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="01LtdW2ey1wHVB4gt98n-5" value="初始化节点，添加index、x、y、vx、vy等属性。&lt;br&gt;将节点nodes按一定半径和旋转角度环绕按叶序排列。&lt;br&gt;遍历每个节点，设置其index为遍历顺序i和初始坐标x和y,vx=vy=0." style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="500" y="100" width="355" height="60" as="geometry" />
+          <mxGeometry x="482.5" y="100" width="355" height="60" as="geometry" />
         </mxCell>
         <mxCell id="01LtdW2ey1wHVB4gt98n-7" value="对于force数组中的每个力，进行初始化操作，传入参数nodes,random,nDim" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="600" y="240" width="120" height="60" as="geometry" />
+          <mxGeometry x="600" y="220" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="bXek7AXk7ThC2l7RJmkr-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="01LtdW2ey1wHVB4gt98n-9" target="bXek7AXk7ThC2l7RJmkr-1">
           <mxGeometry relative="1" as="geometry" />

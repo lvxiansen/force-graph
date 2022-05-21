@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-21T12:34:37.847Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="uZxm8oX861NtRBVlZQPC" version="18.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-21T12:44:17.369Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="X3kwD4bijtdeW_6VHyMG" version="18.0.8" type="github">
   <diagram id="lNqnWQlrgnRqup0vw0e9" name="第 1 页">
     <mxGraphModel dx="1185" dy="628" grid="1" gridSize="20" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="1" shadow="0">
       <root>
@@ -91,8 +91,16 @@
         <mxCell id="bXek7AXk7ThC2l7RJmkr-33" value="初始化每个节点的强度strength也即电荷量" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="838.75" y="740" width="241.25" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="bXek7AXk7ThC2l7RJmkr-35" value="对于每个节点要计算其它所有节点对它的作用力，这样时间复杂度就是n方" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="899.375" y="850" width="120" height="60" as="geometry" />
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-35" value="自四叉树由下而上，求所有节点的合坐标x与合静电电荷量value" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="758.4300000000001" y="840" width="400.63" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="bXek7AXk7ThC2l7RJmkr-40" target="bXek7AXk7ThC2l7RJmkr-35">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1260.005" y="855" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-40" value="&lt;b&gt;为什么采用Barnes–Hut approximation算法以及四叉树?&lt;/b&gt;&lt;br&gt;因为对于每个节点要计算其它所有节点对它的作用力，这样时间复杂度就是\(n^2\),&lt;br&gt;因为有些节点距离当前节点很远，所以可将多个节点看成一团，质量就是整体质量，中心点是它们的质心。这样时间复杂度就变成了n*log(n)&lt;br&gt;那如何分辨哪些节点距离这个节点远呢,如何将这些节点团的边界也即矩阵大小找到呢？&lt;br&gt;用到四叉树。当节点团的面积/（节点团的质心坐标与当前节点坐标的距离的平方）&amp;lt; theta时，将之看做一团。否则仍逐个遍历。" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1240.01" y="785" width="359.99" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

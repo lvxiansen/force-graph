@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-05-22T08:43:32.673Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="jcoOsR7Dw8kjx6lZNqJ8" version="18.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-22T08:44:12.962Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="MYgfpJPkkb_-AOE83GgV" version="18.0.8" type="github">
   <diagram id="lNqnWQlrgnRqup0vw0e9" name="第 1 页">
-    <mxGraphModel dx="677" dy="359" grid="1" gridSize="20" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="1" shadow="0">
+    <mxGraphModel dx="1422" dy="754" grid="1" gridSize="20" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="1" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -111,8 +111,11 @@
         <mxCell id="bXek7AXk7ThC2l7RJmkr-43" value="对于非叶子节点，求其所有子节点电荷量之和，其位置为各子节点电荷量乘以位置后处以总电荷量" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="813.44" y="935" width="290.63" height="165" as="geometry" />
         </mxCell>
+        <mxCell id="bXek7AXk7ThC2l7RJmkr-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bXek7AXk7ThC2l7RJmkr-47" target="bXek7AXk7ThC2l7RJmkr-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="bXek7AXk7ThC2l7RJmkr-47" value="$$node.value=\sum\limits_{i=0}^3quad[i].value$$&lt;br&gt;$$node.x =&amp;nbsp;node.x=\frac{\sum\limits_{i=0}^3(quad[i].value*quad[i].x)}{\sum\limits_{i=0}^3(quad[i].value)}$$" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;glass=0;dashed=1;sketch=0;" vertex="1" parent="1">
-          <mxGeometry x="1240.01" y="963" width="319.99" height="157" as="geometry" />
+          <mxGeometry x="1240.01" y="939" width="319.99" height="157" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
